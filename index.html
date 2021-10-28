@@ -26,7 +26,26 @@
   <main>
     <!-- Order list on the left side -->
     <section class="order-list" data-order-list>
-
+        <div class="order-list__card-panel">
+          <!-- cards will be shown here -->
+          <div class="order-list__card-panel__card">
+            <div class="order-list__card-panel__card__delete"><i class="fas fa-times"></i></div>
+            <div class="order-list__card-panel__card__drink-name">Oolong Tea</div>
+            <div class="order-list__card-panel__card__ice">
+              <span class="order-list__card-panel__card__ice__level">Less</span>
+              <span>Ice</span>
+            </div>
+            <div class="order-list__card-panel__card__sugar">
+              <span class="order-list__card-panel__card__sugar__level">Half</span>
+              <span>Sugar</span>
+            </div>
+            <div class="order-list__card-panel__card__unit-price">
+              <span>$</span>
+              <span class="order-list__card-panel__card__unit-price_number">30</span>
+            </div>
+          </div>
+          <button class="btn order-list--checkout-btn">Checkout</button>
+        </div>
     </section>
     <!-- End - Order list on the left side -->
 
