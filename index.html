@@ -15,19 +15,21 @@
 
 <body>
   <!-- use Sass + BEM naming -->
-  <header>
-    <h1>Alpha Pos System</h1>
-    <div class="header__user">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="user avatar" class="header__user__avatar">
-      <div class="header__user__account">店長</div>
-    </div>
-  </header>
+  <div class="container"></div>
+    <header>
+      <h1>Alpha Pos System</h1>
+      <div class="header__user">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="user avatar"
+          class="header__user__avatar">
+        <div class="header__user__account">店長</div>
+      </div>
+    </header>
 
-  <main>
-    <!-- Order list on the left side -->
-    <section class="order-list" data-order-list>
+    <main>
+      <!-- Order list on the left side -->
+      <section class="order-list" data-order-list>
         <div class="order-list__card-panel">
-          <!-- cards will be shown here -->
+          <!-- order-list will be shown here -->
           <div class="order-list__card-panel__card">
             <div class="order-list__card-panel__card__delete"><i class="fas fa-times"></i></div>
             <div class="order-list__card-panel__card__drink-name">Oolong Tea</div>
@@ -46,16 +48,95 @@
           </div>
           <button class="btn order-list--checkout-btn">Checkout</button>
         </div>
-    </section>
-    <!-- End - Order list on the left side -->
+      </section>
+      <!-- End - Order list on the left side -->
 
-    <!-- Menu list on the right side -->
-    <section class="menu" data-order-panel>
+      <!-- Menu list on the right side -->
+      <section class="menu" data-order-panel>
+        <!-- drink list -->
+        <section class="menu__card-panel">
+          <!-- menu list will be shown here -->
+          <label class="menu__card-panel__label">
+            <input type="checkbox" name="drink">
+            <div class="menu__card-panel__label__card" data-id="1">
+              <h3 class="menu__card-panel__label__card__drink-name">Black Tea</h3>
+              <div class="menu__card-panel__label__card__unit-price">
+                <span>$</span>
+                <span class="menu__card-panel__label__card__unit-price_number">30</span>
+              </div>
+            </div>
+          </label>
+          <label class="menu__card-panel__label">
+            <input type="checkbox" name="drink">
+            <div class="menu__card-panel__label__card" data-id="2">
+              <h3 class="menu__card-panel__label__card__drink-name">Black Tea</h3>
+              <div class="menu__card-panel__label__card__unit-price">
+                <span>$</span>
+                <span class="menu__card-panel__label__card__unit-price_number">30</span>
+              </div>
+            </div>
+          </label>
+          <label class="menu__card-panel__label">
+            <input type="checkbox" name="drink">
+            <div class="menu__card-panel__label__card" data-id="3">
+              <h3 class="menu__card-panel__label__card__drink-name">Black Tea</h3>
+              <div class="menu__card-panel__label__card__unit-price">
+                <span>$</span>
+                <span class="menu__card-panel__label__card__unit-price_number">30</span>
+              </div>
+            </div>
+          </label>
+        </section>
 
-    </section>
-  </main>
+        <!-- ice level -->
+        <section class="menu__ice-level">
+          <h2 class="menu__subtitle">Ice Level</h2>
+          <div class="menu__ice-level__btn-group menu__btn-group">
+            <label class="menu__ice-level__btn-group__level-label">
+              <input type="radio" name="ice" value="no">
+              <div class="menu__ice-level__btn-group__level-label__btn">No</div>
+            </label>
+            <label class="menu__ice-level__btn-group__level-label">
+              <input type="radio" name="ice" value="less">
+              <div class="menu__ice-level__btn-group__level-label__btn">Less</div>
+            </label>
+            <label class="menu__ice-level__btn-group__level-label">
+              <input type="radio" name="ice" value="regular">
+              <div class="menu__ice-level__btn-group__level-label__btn">Regular</div>
+            </label>
+          </div>
+        </section>
 
-  
+        <!-- sugar level -->
+        <section class="menu__sugar-level">
+          <h2 class="menu__subtitle">Sugar</h2>
+          <div class="menu__sugar-level__btn-group menu__btn-group">
+            <label class="menu__sugar-level__btn-group__level-label">
+              <input type="radio" name="sugar" value="no">
+              <div class="menu__sugar-level__btn-group__level-label__btn">No</div>
+            </label>
+            <label class="menu__sugar-level__btn-group__level-label">
+              <input type="radio" name="sugar" value="a little">
+              <div class="menu__sugar-level__btn-group__level-label__btn">A Little</div>
+            </label>
+            <label class="menu__sugar-level__btn-group__level-label">
+              <input type="radio" name="sugar" value="half">
+              <div class="menu__sugar-level__btn-group__level-label__btn">Half</div>
+            </label>
+            <label class="menu__sugar-level__btn-group__level-label">
+              <input type="radio" name="sugar" value="less">
+              <div class="menu__sugar-level__btn-group__level-label__btn">Less</div>
+            </label>
+            <label class="menu__sugar-level__btn-group__level-label">
+              <input type="radio" name="sugar" value="regular">
+              <div class="menu__sugar-level__btn-group__level-label__btn">Regular</div>
+            </label>
+          </div>
+        </section>
+        <button class="menu__add-order-btn">Add</button>
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>
