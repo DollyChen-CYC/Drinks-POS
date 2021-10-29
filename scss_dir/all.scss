@@ -35,7 +35,6 @@ button:hover,
 button:active,
 button:focus {
   border: 0;
-  background-color: transparent;
   outline: none;
   -webkit-appearance: none;
   cursor: pointer;
@@ -111,8 +110,7 @@ $color-order-active: rgba(102, 211, 169, 0.75);
     color: $color-body-text;
   }
   &:active {
-    // background-color: rgba(162, 211, 200, 0.87);
-    background-color: $color-button-active;
+    background-color: rgba(162, 211, 200, 0.87);
   }
 }
 

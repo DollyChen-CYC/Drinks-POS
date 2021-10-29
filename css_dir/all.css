@@ -34,7 +34,6 @@ button:hover,
 button:active,
 button:focus {
   border: 0;
-  background-color: transparent;
   outline: none;
   -webkit-appearance: none;
   cursor: pointer;
@@ -91,7 +90,7 @@ a:focus {
   color: #fff;
 }
 .menu__add-order-btn:active, .order-list__checkout-btn:active {
-  background-color: #a2d3c8;
+  background-color: rgba(162, 211, 200, 0.87);
 }
 
 .order-list__checkout-btn, .order-list__card-panel__card, header .header__user {
