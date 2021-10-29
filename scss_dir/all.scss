@@ -58,6 +58,20 @@ a:focus {
   outline: none;
 }
 
+// Variables
+$color-body-text: #fff;
+$color-text-dark: rgb(73, 90, 80);
+$color-button-active: rgb(162, 211, 200);
+$color-order-hover: rgb(29, 146, 121);
+
+/* ------- Project styles start here ------- */
+/* ----- basic settings ----- */
+::-webkit-scrollbar {
+  /* make scrollbar transparent */
+  width: 0px;
+  background: transparent;
+}
+
 // Mixins
 
 // placeholder-selector
@@ -71,8 +85,39 @@ a:focus {
   }
 }
 
-/* ------- Project styles start here ------- */
-/* ----- basic settings ----- */
+%scrollbar {
+  padding-left: 4px;
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(129, 129, 129, 0.356);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(202, 202, 202, 0.493);
+  }
+}
+
+%btn {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: $color-body-text;
+  color: $color-text-dark;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  &:hover {
+    background-color: $color-button-active;
+    color: $color-body-text;
+  }
+  &:active {
+    background-color: rgba(162, 211, 200, 0.87);
+  }
+}
+
+%box-shadow {
+  box-shadow: 2px 3px 13px 0 rgba(160, 160, 160, 0.671);
+}
+
 body {
   background-image: url("https://images.unsplash.com/photo-1496318447583-f524534e9ce1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80");
   background-size: cover;
@@ -82,13 +127,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: $color-body-text;
 }
 
 .container {
   width: 90vw;
   height: 85vh;
-  // background-color: #e7e7e7c9;
   background-color: #363636c9;
   border-radius: 8px;
   box-shadow: 3px 3px 12px 10px #5c5a6d48;
@@ -98,10 +142,12 @@ body {
 /* ----- header ----- */
 header {
   position: relative;
+  flex-basis: auto;
   width: 100%;
-  padding: 1rem;
+  height: 70px;
   text-align: center;
   h1 {
+    line-height: 70px;
     cursor: default;
   }
   .header__user {
@@ -145,5 +191,58 @@ header {
   }
 }
 /* ----- main ----- */
+main {
+  height: calc(85vh - 70px);
+  width: 100%;
+  display: flex;
+  .order-list {
+    flex-grow: 1;
+  }
+  .menu {
+    flex-grow: 5;
+  }
+}
 /* ----- order-list ----- */
+.order-list {
+  position: relative;
+  height: 100%;
+  padding: 15px;
+
+  &__card-panel {
+    height: 90%;
+    overflow-y: auto;
+    
+    @extend %scrollbar;
+    &__card {
+      position: relative;
+      margin: 0 16px 16px 12px;
+      padding: 16px;
+      border-radius: 5px;
+      background-color: $color-body-text;
+      color: $color-text-dark;
+      @extend %box-shadow;
+      &:hover {
+        color: $color-order-hover;
+      }
+      &__delete {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        font-size: 18px;
+        &:hover {
+          color: rgb(184, 63, 63);
+        }
+        &:active {
+          color: rgb(219, 2, 2);
+        }
+      }
+    }
+  }
+  &__checkout-btn {
+    position: absolute;
+    bottom: calc(10px + 1vh);
+    right: 36px;
+    @extend %btn, %box-shadow;
+  }
+}
 /* ----- menu ----- */

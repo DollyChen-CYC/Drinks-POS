@@ -59,6 +59,45 @@ a:focus {
 
 /* ------- Project styles start here ------- */
 /* ----- basic settings ----- */
+::-webkit-scrollbar {
+  /* make scrollbar transparent */
+  width: 0px;
+  background: transparent;
+}
+
+.order-list__card-panel {
+  padding-left: 4px;
+}
+.order-list__card-panel::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgba(129, 129, 129, 0.356);
+}
+.order-list__card-panel::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(202, 202, 202, 0.493);
+}
+
+.order-list__checkout-btn {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #495a50;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+.order-list__checkout-btn:hover {
+  background-color: #a2d3c8;
+  color: #fff;
+}
+.order-list__checkout-btn:active {
+  background-color: rgba(162, 211, 200, 0.87);
+}
+
+.order-list__checkout-btn, .order-list__card-panel__card {
+  box-shadow: 2px 3px 13px 0 rgba(160, 160, 160, 0.671);
+}
+
 body {
   background-image: url("https://images.unsplash.com/photo-1496318447583-f524534e9ce1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80");
   background-size: cover;
@@ -68,7 +107,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #fff;
 }
 
 .container {
@@ -83,11 +122,13 @@ body {
 /* ----- header ----- */
 header {
   position: relative;
+  flex-basis: auto;
   width: 100%;
-  padding: 1rem;
+  height: 70px;
   text-align: center;
 }
 header h1 {
+  line-height: 70px;
   cursor: default;
 }
 header .header__user {
@@ -131,7 +172,57 @@ header .header__user__account:active {
 }
 
 /* ----- main ----- */
+main {
+  height: calc(85vh - 70px);
+  width: 100%;
+  display: flex;
+}
+main .order-list {
+  flex-grow: 1;
+}
+main .menu {
+  flex-grow: 5;
+}
+
 /* ----- order-list ----- */
+.order-list {
+  position: relative;
+  height: 100%;
+  padding: 15px;
+}
+.order-list__card-panel {
+  height: 90%;
+  overflow-y: auto;
+}
+.order-list__card-panel__card {
+  position: relative;
+  margin: 0 16px 16px 12px;
+  padding: 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #495a50;
+}
+.order-list__card-panel__card:hover {
+  color: #1d9279;
+}
+.order-list__card-panel__card__delete {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 18px;
+}
+.order-list__card-panel__card__delete:hover {
+  color: #b83f3f;
+}
+.order-list__card-panel__card__delete:active {
+  color: #db0202;
+}
+.order-list__checkout-btn {
+  position: absolute;
+  bottom: calc(10px + 1vh);
+  right: 36px;
+}
+
 /* ----- menu ----- */
 
 /*# sourceMappingURL=all.css.map */
