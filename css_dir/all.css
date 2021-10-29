@@ -81,6 +81,55 @@ body {
 }
 
 /* ----- header ----- */
+header {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+header h1 {
+  cursor: default;
+}
+header .header__user {
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  right: 1rem;
+  top: 1rem;
+  border-radius: 5px;
+  background-color: #95c4ba;
+}
+header .header__user__avatar {
+  font-size: 20px;
+}
+header .header__user__role {
+  font-size: 12px;
+}
+header .header__user__account {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  border: 1px solid #fdfdfd;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(68, 68, 68, 0.678);
+  font-weight: 800;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+header .header__user__account:hover {
+  opacity: 1;
+}
+header .header__user__account:active {
+  background-color: rgba(119, 119, 119, 0.678);
+}
+
 /* ----- main ----- */
 /* ----- order-list ----- */
 /* ----- menu ----- */
