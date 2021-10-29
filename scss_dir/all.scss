@@ -63,6 +63,7 @@ $color-body-text: #fff;
 $color-text-dark: rgb(73, 90, 80);
 $color-button-active: rgb(162, 211, 200);
 $color-order-hover: rgb(29, 146, 121);
+$color-order-active: rgba(102, 211, 169, 0.75);
 
 /* ------- Project styles start here ------- */
 /* ----- basic settings ----- */
@@ -110,7 +111,8 @@ $color-order-hover: rgb(29, 146, 121);
     color: $color-body-text;
   }
   &:active {
-    background-color: rgba(162, 211, 200, 0.87);
+    // background-color: rgba(162, 211, 200, 0.87);
+    background-color: $color-button-active;
   }
 }
 
@@ -125,7 +127,7 @@ $color-order-hover: rgb(29, 146, 121);
   // background-color: $color-body-text;
   // color: $color-text-dark;
   text-align: center;
-  &:hover{
+  &:hover {
     background-color: rgba(199, 199, 199, 0.432);
   }
 }
@@ -321,6 +323,14 @@ main {
         }
       }
     }
+    [type="radio"]:checked ~ &__card {
+      background-color: $color-order-active;
+      color: $color-body-text;
+      box-shadow: 0 0 6px 5px rgba(255, 255, 255, 0.651);
+      h3 {
+        color: $color-body-text;
+      }
+    }
   }
 }
 
@@ -336,6 +346,9 @@ main {
       flex: 1 1 auto;
       &__btn {
         @extend %level-selection-btn;
+      }
+      [type="radio"]:checked ~ &__btn {
+        background-color: $color-order-active;
       }
     }
   }
@@ -353,6 +366,9 @@ main {
       flex: 1 1 auto;
       &__btn {
         @extend %level-selection-btn;
+      }
+      [type="radio"]:checked ~ &__btn {
+        background-color: $color-order-active;
       }
     }
   }

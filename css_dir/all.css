@@ -91,7 +91,7 @@ a:focus {
   color: #fff;
 }
 .menu__add-order-btn:active, .order-list__checkout-btn:active {
-  background-color: rgba(162, 211, 200, 0.87);
+  background-color: #a2d3c8;
 }
 
 .order-list__checkout-btn, .order-list__card-panel__card, header .header__user {
@@ -293,6 +293,14 @@ main h3 {
 .menu__card-panel__label__card:hover h3 {
   color: #1d9279;
 }
+[type=radio]:checked ~ .menu__card-panel__label__card {
+  background-color: rgba(102, 211, 169, 0.75);
+  color: #fff;
+  box-shadow: 0 0 6px 5px rgba(255, 255, 255, 0.651);
+}
+[type=radio]:checked ~ .menu__card-panel__label__card h3 {
+  color: #fff;
+}
 
 /* ice level */
 .menu__ice-level__btn-group {
@@ -305,6 +313,10 @@ main h3 {
 .menu__ice-level__btn-group__level-label {
   flex: 1 1 auto;
 }
+[type=radio]:checked ~ .menu__ice-level__btn-group__level-label__btn {
+  background-color: rgba(102, 211, 169, 0.75);
+}
+
 /* sugar level */
 .menu__sugar-level__btn-group {
   width: 50%;
@@ -315,6 +327,9 @@ main h3 {
 }
 .menu__sugar-level__btn-group__level-label {
   flex: 1 1 auto;
+}
+[type=radio]:checked ~ .menu__sugar-level__btn-group__level-label__btn {
+  background-color: rgba(102, 211, 169, 0.75);
 }
 
 /*# sourceMappingURL=all.css.map */
