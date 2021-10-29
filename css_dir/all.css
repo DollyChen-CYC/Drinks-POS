@@ -98,6 +98,16 @@ a:focus {
   box-shadow: 2px 3px 13px 0 rgba(160, 160, 160, 0.671);
 }
 
+.menu__sugar-level__btn-group__level-label__btn, .menu__ice-level__btn-group__level-label__btn {
+  width: 100%;
+  padding: 10px 25px;
+  border: 1.5px solid #a2d3c8;
+  text-align: center;
+}
+.menu__sugar-level__btn-group__level-label__btn:hover, .menu__ice-level__btn-group__level-label__btn:hover {
+  background-color: rgba(199, 199, 199, 0.432);
+}
+
 body {
   background-image: url("https://images.unsplash.com/photo-1496318447583-f524534e9ce1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80");
   background-size: cover;
@@ -246,6 +256,7 @@ main h3 {
 }
 .menu__subtitle {
   cursor: default;
+  margin-bottom: 8px;
 }
 .menu section {
   width: 100%;
@@ -281,6 +292,29 @@ main h3 {
 }
 .menu__card-panel__label__card:hover h3 {
   color: #1d9279;
+}
+
+/* ice level */
+.menu__ice-level__btn-group {
+  width: 35%;
+  min-width: 300px;
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid #a2d3c8;
+}
+.menu__ice-level__btn-group__level-label {
+  flex: 1 1 auto;
+}
+/* sugar level */
+.menu__sugar-level__btn-group {
+  width: 50%;
+  min-width: 550px;
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid #a2d3c8;
+}
+.menu__sugar-level__btn-group__level-label {
+  flex: 1 1 auto;
 }
 
 /*# sourceMappingURL=all.css.map */
