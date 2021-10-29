@@ -65,19 +65,19 @@ a:focus {
   background: transparent;
 }
 
-.order-list__card-panel {
+.menu, .order-list__card-panel {
   padding-left: 4px;
 }
-.order-list__card-panel::-webkit-scrollbar {
+.menu::-webkit-scrollbar, .order-list__card-panel::-webkit-scrollbar {
   width: 6px;
   background-color: rgba(129, 129, 129, 0.356);
 }
-.order-list__card-panel::-webkit-scrollbar-thumb {
+.menu::-webkit-scrollbar-thumb, .order-list__card-panel::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: rgba(202, 202, 202, 0.493);
 }
 
-.order-list__checkout-btn {
+.menu__add-order-btn, .order-list__checkout-btn {
   padding: 8px 12px;
   border-radius: 5px;
   background-color: #fff;
@@ -86,15 +86,15 @@ a:focus {
   font-size: 18px;
   letter-spacing: 0.5px;
 }
-.order-list__checkout-btn:hover {
+.menu__add-order-btn:hover, .order-list__checkout-btn:hover {
   background-color: #a2d3c8;
   color: #fff;
 }
-.order-list__checkout-btn:active {
+.menu__add-order-btn:active, .order-list__checkout-btn:active {
   background-color: rgba(162, 211, 200, 0.87);
 }
 
-.order-list__checkout-btn, .order-list__card-panel__card {
+.order-list__checkout-btn, .order-list__card-panel__card, header .header__user {
   box-shadow: 2px 3px 13px 0 rgba(160, 160, 160, 0.671);
 }
 
@@ -183,6 +183,11 @@ main .order-list {
 main .menu {
   flex-grow: 5;
 }
+main h3 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 5px;
+}
 
 /* ----- order-list ----- */
 .order-list {
@@ -205,6 +210,9 @@ main .menu {
 .order-list__card-panel__card:hover {
   color: #1d9279;
 }
+.order-list__card-panel__card:hover h3 {
+  color: #1d9279;
+}
 .order-list__card-panel__card__delete {
   position: absolute;
   top: 8px;
@@ -224,5 +232,55 @@ main .menu {
 }
 
 /* ----- menu ----- */
+.menu {
+  padding: 16px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.menu input[type=radio] {
+  display: none;
+}
+.menu label {
+  cursor: pointer;
+}
+.menu__subtitle {
+  cursor: default;
+}
+.menu section {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.menu__add-order-btn {
+  width: 180px;
+  margin-bottom: 1vh;
+  align-self: end;
+}
+
+/* drink menu */
+.menu__card-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.menu__card-panel__label__card {
+  width: 180px;
+  padding: 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #495a50;
+}
+.menu__card-panel__label__card__drink-name {
+  margin-bottom: 8px;
+}
+.menu__card-panel__label__card__unit-price {
+  font-size: 18px;
+}
+.menu__card-panel__label__card:hover {
+  color: #1d9279;
+}
+.menu__card-panel__label__card:hover h3 {
+  color: #1d9279;
+}
 
 /*# sourceMappingURL=all.css.map */
