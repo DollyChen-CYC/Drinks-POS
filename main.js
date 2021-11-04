@@ -151,6 +151,8 @@ function handleNewOrderAdd () {
     alphaPos.addDrinkOrder(selectedDrink)
     const drinkInputs = menuPanel.querySelectorAll('[name=drink]')
     drinkInputs.forEach(drink => drink.checked = false)
+    iceLevel.querySelector('.default-option').checked = true
+    sugarLevel.querySelector('.default-option').checked = true
   }
 }
 
