@@ -1,0 +1,18 @@
+/* ----- main ----- */
+main {
+  height: calc(85vh - 70px);
+  width: 100%;
+  display: flex;
+  .order-list {
+    flex: 1 0 25% ;
+    min-width: 230px;
+  }
+  .menu {
+    flex-grow: 1;
+  }
+  h3 {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+}

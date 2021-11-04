@@ -1,0 +1,105 @@
+/* ----- menu ----- */
+.menu {
+  padding: 16px;
+  overflow: auto;
+  @extend %scrollbar;
+  display: flex;
+  flex-direction: column;
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    cursor: pointer;
+  }
+  &__subtitle {
+    cursor: default;
+    margin-bottom: 8px;
+  }
+  section {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &__add-order-btn {
+    width: 180px;
+    margin-bottom: calc(1vh);
+    align-self: end;
+    @extend %btn;
+  }
+}
+
+/* drink menu */
+.menu__card-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  &__label {
+    &__card {
+      width: 180px;
+      padding: 16px;
+      border-radius: 5px;
+      background-color: $color-body-text;
+      color: $color-text-dark;
+      &__drink-name {
+        margin-bottom: 8px;
+      }
+      &__unit-price {
+        font-size: 18px;
+      }
+      &:hover {
+        color: $color-order-hover;
+        h3 {
+          color: $color-order-hover;
+        }
+      }
+    }
+    [type="radio"]:checked ~ &__card {
+      background-color: $color-order-active;
+      color: $color-body-text;
+      box-shadow: 0 0 6px 5px rgba(255, 255, 255, 0.651);
+      h3 {
+        color: $color-body-text;
+      }
+    }
+  }
+}
+
+/* ice level */
+.menu__ice-level {
+  &__btn-group {
+    width: 35%;
+    min-width: 300px;
+    display: flex;
+    border-radius: 5px;
+    border: 2px solid $color-button-active;
+    &__level-label {
+      flex: 1 1 auto;
+      &__btn {
+        @extend %level-selection-btn;
+      }
+      [type="radio"]:checked ~ &__btn {
+        background-color: $color-order-active;
+      }
+    }
+  }
+}
+
+/* sugar level */
+.menu__sugar-level {
+  &__btn-group {
+    width: 50%;
+    min-width: 550px;
+    display: flex;
+    border-radius: 5px;
+    border: 2px solid $color-button-active;
+    &__level-label {
+      flex: 1 1 auto;
+      &__btn {
+        @extend %level-selection-btn;
+      }
+      [type="radio"]:checked ~ &__btn {
+        background-color: $color-order-active;
+      }
+    }
+  }
+}

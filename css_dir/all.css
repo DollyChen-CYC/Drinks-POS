@@ -56,14 +56,6 @@ a:focus {
   outline: none;
 }
 
-/* ------- Project styles start here ------- */
-/* ----- basic settings ----- */
-::-webkit-scrollbar {
-  /* make scrollbar transparent */
-  width: 0px;
-  background: transparent;
-}
-
 .menu, .order-list__card-panel {
   padding-left: 4px;
 }
@@ -105,6 +97,14 @@ a:focus {
 }
 .menu__sugar-level__btn-group__level-label__btn:hover, .menu__ice-level__btn-group__level-label__btn:hover {
   background-color: rgba(199, 199, 199, 0.432);
+}
+
+/* ------- Project styles start here ------- */
+/* ----- basic settings ----- */
+::-webkit-scrollbar {
+  /* make scrollbar transparent */
+  width: 0px;
+  background: transparent;
 }
 
 body {

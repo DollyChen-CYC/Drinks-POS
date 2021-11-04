@@ -1,0 +1,47 @@
+/* ----- order-list ----- */
+.order-list {
+  position: relative;
+  height: 100%;
+  padding: 15px;
+
+  &__card-panel {
+    height: 90%;
+    overflow-y: auto;
+    border-right: 1px solid rgba(255, 255, 255, 0.596);
+
+    @extend %scrollbar;
+    &__card {
+      position: relative;
+      margin: 0 16px 16px 12px;
+      padding: 16px;
+      border-radius: 5px;
+      background-color: $color-body-text;
+      color: $color-text-dark;
+      @extend %box-shadow;
+      &:hover {
+        color: $color-order-hover;
+        h3 {
+          color: $color-order-hover;
+        }
+      }
+      &__delete {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        font-size: 18px;
+        &:hover {
+          color: rgb(184, 63, 63);
+        }
+        &:active {
+          color: rgb(219, 2, 2);
+        }
+      }
+    }
+  }
+  &__checkout-btn {
+    position: absolute;
+    bottom: calc(10px + 1vh);
+    right: 36px;
+    @extend %btn, %box-shadow;
+  }
+}

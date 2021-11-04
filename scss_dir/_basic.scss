@@ -1,0 +1,27 @@
+/* ----- basic settings ----- */
+::-webkit-scrollbar {
+  /* make scrollbar transparent */
+  width: 0px;
+  background: transparent;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1496318447583-f524534e9ce1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80");
+  background-size: cover;
+  overflow: hidden;
+  padding: 2rem;
+  font-family: "Noto Sans TC", "Lato", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-body-text;
+}
+
+.container {
+  width: 90vw;
+  height: 85vh;
+  background-color: #363636c9;
+  border-radius: 8px;
+  box-shadow: 3px 3px 12px 10px #5c5a6d48;
+  overflow: hidden;
+}
