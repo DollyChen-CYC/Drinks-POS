@@ -187,10 +187,11 @@ main {
   display: flex;
 }
 main .order-list {
-  flex-grow: 1;
+  flex: 1 0 25%;
+  min-width: 230px;
 }
 main .menu {
-  flex-grow: 5;
+  flex-grow: 1;
 }
 main h3 {
   font-size: 18px;
@@ -207,6 +208,7 @@ main h3 {
 .order-list__card-panel {
   height: 90%;
   overflow-y: auto;
+  border-right: 1px solid rgba(255, 255, 255, 0.596);
 }
 .order-list__card-panel__card {
   position: relative;

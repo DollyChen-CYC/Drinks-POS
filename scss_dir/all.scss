@@ -209,10 +209,11 @@ main {
   width: 100%;
   display: flex;
   .order-list {
-    flex-grow: 1;
+    flex: 1 0 25% ;
+    min-width: 230px;
   }
   .menu {
-    flex-grow: 5;
+    flex-grow: 1;
   }
   h3 {
     font-size: 18px;
@@ -229,6 +230,7 @@ main {
   &__card-panel {
     height: 90%;
     overflow-y: auto;
+    border-right: 1px solid rgba(255, 255, 255, 0.596);
 
     @extend %scrollbar;
     &__card {
