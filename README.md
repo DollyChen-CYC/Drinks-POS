@@ -1,7 +1,7 @@
 # Drinks-POS
 #### A POS page built with HTML, CSS, SASS and JS
 #### 👉👉  Take a look at this [POS PAGE](https://dollychen-cyc.github.io/Drinks-POS/).
-#### .
+<img height="400" src="https://github.com/DollyChen-CYC/portfolio/blob/main/src/assets/images/5-drinks-POS.png" alt="Project Screenshot" />
 
 ## 🏃‍♀️ How to compile CSS styles from Sass file locally
 
